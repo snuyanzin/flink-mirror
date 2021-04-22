@@ -879,6 +879,20 @@ public final class BuiltInFunctionDefinitions {
                     .outputTypeStrategy(nullable(explicit(DataTypes.DOUBLE())))
                     .build();
 
+    public static final BuiltInFunctionDefinition GREATEST =
+            BuiltInFunctionDefinition.newBuilder()
+                    .name("greatest")
+                    .kind(SCALAR)
+                    .outputTypeStrategy(TypeStrategies.MISSING)
+                    .build();
+
+    public static final BuiltInFunctionDefinition LEAST =
+            BuiltInFunctionDefinition.newBuilder()
+                    .name("least")
+                    .kind(SCALAR)
+                    .outputTypeStrategy(TypeStrategies.MISSING)
+                    .build();
+
     public static final BuiltInFunctionDefinition MOD =
             BuiltInFunctionDefinition.newBuilder()
                     .name("mod")

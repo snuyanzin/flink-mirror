@@ -1545,6 +1545,16 @@ class ScalarFunctionsTest extends ScalarTypesTestBase {
   }
 
   @Test
+  def testGreatest(): Unit = {
+    testSqlApi("greatest('1234', '2345', '3456')", "3456")
+  }
+
+  @Test
+  def testLeast(): Unit = {
+    testSqlApi("least('1234', '2345', '3456')", "1234")
+  }
+
+  @Test
   def testPower(): Unit = {
     // f7: int , f4: long, f6: double
     testAllApis(
